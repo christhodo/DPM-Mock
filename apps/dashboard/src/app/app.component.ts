@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@starbucks/api-interfaces';
 
 @Component({
   selector: 'starbucks-root',
@@ -8,6 +6,10 @@ import { Message } from '@starbucks/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  title = '';
+
+  links = [
+    { path: '/login', icon: 'vpn_key', title: 'Login' },
+    { path: '/orders', icon: 'view_list', title: 'Orders' },
+  ];
 }

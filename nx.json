@@ -35,6 +35,12 @@
     },
     "api-interfaces": {
       "tags": []
+    },
+    "material": {
+      "tags": []
+    },
+    "core-data": {
+      "tags": []
     }
   }
 }

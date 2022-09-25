@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-title>
+    Orders In Progress
+  </mat-card-title>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let order of orders"
+        class="mat-list-option"
+        (click)="selected.emit(order)"
+      >
+        <span matLine>{{ order.title | titlecase }}</span>
+        <button
+          *ngIf="!readonly"
+          attr.data-cy="delete-orders-{{ order.id }}-btn"
+          mat-icon-button
+          type="button"
+          color="warn"
+          (click)="deleted.emit(order.id); $event.stopImmediatePropagation()"
+        >
+          <mat-icon>clear</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

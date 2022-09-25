@@ -16,7 +16,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@starbucks/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@starbucks/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@starbucks/material": ["libs/material/src/index.ts"],
+      "@starbucks/core-data": ["libs/core-data/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

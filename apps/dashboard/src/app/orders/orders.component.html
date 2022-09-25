@@ -1,0 +1,18 @@
+<div class="component-container">
+  <div class="list-component">
+    <starbucks-orders-list
+      [orders]="orders$ | async"
+      (selected)="selectOrder($event)"
+      (deleted)="deleteOrder($event)"
+    >
+    </starbucks-orders-list>
+  </div>
+  <div class="details-component">
+    <starbucks-order-details
+      [order]="selectedOrder"
+      (saved)="saveOrder($event)"
+      (cancelled)="resetForm()"
+    >
+    </starbucks-order-details>
+  </div>
+</div>
