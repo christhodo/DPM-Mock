@@ -13,6 +13,7 @@ import { OrdersListComponent } from './orders/orders-list/orders-list.component'
 import { OrderDetailsComponent } from './orders/order-details/order-details.component';
 import { LoginComponent } from './login/login.component';
 import { MaterialModule } from '@starbucks/material';
+import { ToolbarComponent, UiToolbarModule } from 'libs/ui-toolbar/src';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MaterialModule } from '@starbucks/material';
     CoreDataModule,
     RoutingModule,
     ReactiveFormsModule,
+    UiToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

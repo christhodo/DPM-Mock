@@ -12,4 +12,8 @@ export class AppComponent {
     { path: '/login', icon: 'vpn_key', title: 'Login' },
     { path: '/orders', icon: 'view_list', title: 'Orders' },
   ];
+
+  toggleSideNav() {}
+
+  logout() {}
 }

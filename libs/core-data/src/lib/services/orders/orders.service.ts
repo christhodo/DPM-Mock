@@ -1,8 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Order } from '@starbucks/api-interfaces';
-
-const BASE_URL = 'http://localhost:3000';
+import { environment } from 'apps/dashboard/src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -33,7 +32,7 @@ export class OrdersService {
   }
 
   private getUrl() {
-    return `${BASE_URL}/${this.model}`;
+    return `${environment.apiEndpoint}/${this.model}`;
   }
 
   private getUrlWithId(id) {
